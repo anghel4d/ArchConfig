@@ -76,7 +76,7 @@ That's the initial disk management out of the way. Now we're ready to install Li
 
 
 10. Generate fstab
->$ genfstab -U /mnt >$>$ /mnt/etc/fstab
+>$ genfstab -U /mnt >> /mnt/etc/fstab
 
 11. Chroot into installed system
 >$ arch-chroot /mnt
@@ -219,6 +219,7 @@ Optional support for 32-bit applications
 2. Nvidia Driver Configuration
 
 >$ vim /etc/mkinitcpio.conf
+
 Remove ``kms`` from the HOOKS array in /etc/mkinitcpio.conf
 
 Add ``nvidia``, ``nvidia_modeset``, ``nvidia_uvm`` and ``nvidia_drm`` to the initramfs.
@@ -294,7 +295,7 @@ Kitty is the default terminal emulator.
 
 Desktop environments
 
-BTRFS Snapshotting
+BTRFS Snapshottingœ
 
 Managing flatpaks
 
